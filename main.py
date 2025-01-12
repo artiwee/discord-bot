@@ -1,10 +1,7 @@
-import asyncpg
 import discord
 from discord.ext import commands
-from environement import settings
-import os
 
-DATABASE_URL = "postgresql://"
+from environement import settings
 
 
 class Bot(commands.Bot):
@@ -23,20 +20,20 @@ class Bot(commands.Bot):
     async def on_ready(self):
         await bot.wait_until_ready()
 
-        await bot.tree.sync() 
+        await bot.tree.sync()
         print(f"{bot.user} à correctement été connecté")
 
 
 bot = Bot()
 
 
-@bot.command()  # Commande pour synchroniser les commandes slash (doit être exécutée par Micha)
+@bot.command()
 async def sync(ctx):
     await bot.tree.sync()
     print("Les commandes ont été chargées.")
 
 
-@bot.command()  # Commande pour charger un cog (doit être exécutée par Micha)
+@bot.command()
 async def load(ctx, name=None):
     if name:
         await bot.load_extension(name)
@@ -47,7 +44,7 @@ async def load(ctx, name=None):
         print("Vous n'avez pas renseigné le cog à load.")
 
 
-@bot.command()  
+@bot.command()
 async def unload(ctx, name=None):
     if name:
         await bot.unload_extension(name)
@@ -58,7 +55,7 @@ async def unload(ctx, name=None):
         print("Vous n'avez pas renseigné le cog à unload.")
 
 
-@bot.command()  
+@bot.command()
 async def reload(ctx, name=None):
     if name:
         await bot.reload_extension(name)
@@ -71,4 +68,4 @@ async def reload(ctx, name=None):
 
 if __name__ == "__main__":
     bot = Bot()
-    bot.run(settings.DISCORD_TOKEN)  
+    bot.run(settings.DISCORD_TOKEN)
