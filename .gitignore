@@ -5,5 +5,7 @@
 *.pyc
 /.idea
 /venv
-/Cogs/__pycache__
+/cogs/__pycache__
 /__pycache__
+
+.env

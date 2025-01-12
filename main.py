@@ -55,8 +55,8 @@ class Bot(commands.Bot):
         await db.close()
 
         # Chargement des Cogs et des Views
-        await bot.load_extension("Cogs.moderation")
-        await bot.load_extension("Cogs.embedscreation")
+        await bot.load_extension("cogs.moderation")
+        await bot.load_extension("cogs.embedscreation")
 
     async def on_ready(self):
         await bot.wait_until_ready()
