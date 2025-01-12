@@ -1,0 +1,27 @@
+services:
+  bot:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - .:/app
+    environment:
+      - DISCORD_TOKEN=${DISCORD_TOKEN}
+    command: sh -c "poetry install & poetry run nodemon --watch './**/*.py' --exec 'python main.py'"
+    networks:
+      - wee_net
+    restart: unless-stopped
+
+  api:
+    build:
+      context: api
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./api:/app
+    networks:
+      - wee_net
+    restart: unless-stopped
+
+networks:
+  wee_net:
+    driver: bridge
