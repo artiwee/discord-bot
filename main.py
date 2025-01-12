@@ -1,5 +1,5 @@
-import discord
 import asyncpg
+import discord
 from discord.ext import commands
 
 TOKEN_BOT = ""
