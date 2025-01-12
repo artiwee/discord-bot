@@ -1,22 +1,34 @@
 import discord
 from discord.ext import commands
+from infrastructure.services.cog_loader import CogLoader
+from infrastructure.services.logger_service import LoggerService
+from pathlib import Path
 
 from environement import settings
 
 
 class Bot(commands.Bot):
-    def __init__(self):
-        super().__init__(
-            name="Talent Hub BOT",
-            command_prefix="!",
-            description="Bot Discord officiel de Talent Hub",
-            intents=discord.Intents.all(),
-        )
 
-    async def setup_hook(self):
-        await bot.load_extension("cogs.moderation")
-        await bot.load_extension("cogs.embedscreation")
-        await bot.load_extension("cogs.youtube")
+    def __init__(self):
+        intents = discord.Intents.default()
+        intents.message_content = True
+        super().__init__(command_prefix="!", intents=intents)
+        
+        logger_service = LoggerService()
+        self.logger = logger_service.get_logger(
+            name="bot",
+            log_file=Path("logs/bot.log")
+        )
+        self.cog_loader = CogLoader(self)
+
+    async def setup_hook(self) -> None:
+        summary = await self.cog_loader.load_all_cogs()
+        
+        if summary.failed:
+            failed_cogs = [name for name, _ in summary.failed]
+            self.logger.warning(
+                f"⚠️ Certains cogs n'ont pas pu être chargés: {', '.join(failed_cogs)}"
+            )
 
     async def on_ready(self):
         await bot.wait_until_ready()

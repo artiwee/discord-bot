@@ -1,0 +1,9 @@
+2025-01-12 13:28:39,094 - infrastructure.services.cog_loader - INFO - Début du chargement des cogs depuis cogs
+2025-01-12 13:28:39,127 - infrastructure.services.cog_loader - INFO - ✅ Cog youtube chargé avec succès
+2025-01-12 13:28:39,127 - infrastructure.services.cog_loader - INFO - ✅ Cog moderation chargé avec succès
+2025-01-12 13:28:39,128 - infrastructure.services.cog_loader - INFO - ✅ Cog embedscreation chargé avec succès
+2025-01-12 13:28:39,128 - infrastructure.services.cog_loader - INFO - Chargement des cogs terminé:
+- Total: 3
+- Succès: 3
+- Échecs: 0
+- Taux de réussite: 100.0%
