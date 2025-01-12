@@ -60,7 +60,7 @@ class AdModal(Modal, title="Create your advertisement"):
 
         embed = discord.Embed(
             title=self.title_input.value,
-            description=f"{self.description.value}\n\n→ **{self.cta.value}**",
+            description=f"{self.description.value}\n\n-# {self.cta.value}",
             color=0x2F3136,
         )
 
