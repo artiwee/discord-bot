@@ -1,8 +1,9 @@
 import asyncpg
 import discord
 from discord.ext import commands
+from environement import settings
+import os
 
-TOKEN_BOT = ""
 DATABASE_URL = "postgresql://"
 
 
@@ -119,5 +120,4 @@ async def reload(ctx, name=None):
         await ctx.send("Vous n'êtes pas autorisé à utiliser cette commande.")
 
 
-# bot.run(TOKEN_BOT)  # Lancement du bot avec le token
-bot.run(TOKEN_BOT)
+bot.run(settings.DISCORD_TOKEN)
