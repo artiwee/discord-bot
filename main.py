@@ -16,6 +16,7 @@ class Bot(commands.Bot):
     async def setup_hook(self):
         await bot.load_extension("cogs.moderation")
         await bot.load_extension("cogs.embedscreation")
+        await bot.load_extension("cogs.youtube")
 
     async def on_ready(self):
         await bot.wait_until_ready()
