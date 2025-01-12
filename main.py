@@ -1,10 +1,11 @@
-import discord
-from discord.ext import commands
-from infrastructure.services.cog_loader import CogLoader
-from infrastructure.services.logger_service import LoggerService
 from pathlib import Path
 
+import discord
+from discord.ext import commands
+
 from environement import settings
+from infrastructure.services.cog_loader import CogLoader
+from infrastructure.services.logger_service import LoggerService
 
 
 class Bot(commands.Bot):
@@ -13,17 +14,16 @@ class Bot(commands.Bot):
         intents = discord.Intents.default()
         intents.message_content = True
         super().__init__(command_prefix="!", intents=intents)
-        
+
         logger_service = LoggerService()
         self.logger = logger_service.get_logger(
-            name="bot",
-            log_file=Path("logs/bot.log")
+            name="bot", log_file=Path("logs/bot.log")
         )
         self.cog_loader = CogLoader(self)
 
     async def setup_hook(self) -> None:
         summary = await self.cog_loader.load_all_cogs()
-        
+
         if summary.failed:
             failed_cogs = [name for name, _ in summary.failed]
             self.logger.warning(

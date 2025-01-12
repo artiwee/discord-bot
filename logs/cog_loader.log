@@ -17,3 +17,35 @@
 - Succès: 4
 - Échecs: 0
 - Taux de réussite: 100.0%
+2025-01-12 17:31:34,531 - infrastructure.services.cog_loader - INFO - Début du chargement des cogs depuis cogs
+2025-01-12 17:31:34,592 - infrastructure.services.cog_loader - INFO - ✅ Cog social chargé avec succès
+2025-01-12 17:31:34,592 - infrastructure.services.cog_loader - INFO - ✅ Cog youtube chargé avec succès
+2025-01-12 17:31:34,593 - infrastructure.services.cog_loader - INFO - ✅ Cog moderation chargé avec succès
+2025-01-12 17:31:34,593 - infrastructure.services.cog_loader - INFO - ✅ Cog embedscreation chargé avec succès
+2025-01-12 17:31:34,593 - infrastructure.services.cog_loader - INFO - Chargement des cogs terminé:
+- Total: 4
+- Succès: 4
+- Échecs: 0
+- Taux de réussite: 100.0%
+2025-01-12 17:52:46,792 - infrastructure.services.cog_loader - INFO - Début du chargement des cogs depuis cogs
+2025-01-12 17:52:46,866 - infrastructure.services.cog_loader - INFO - ✅ Cog social chargé avec succès
+2025-01-12 17:52:46,866 - infrastructure.services.cog_loader - INFO - ✅ Cog youtube chargé avec succès
+2025-01-12 17:52:46,867 - infrastructure.services.cog_loader - INFO - ✅ Cog moderation chargé avec succès
+2025-01-12 17:52:46,867 - infrastructure.services.cog_loader - INFO - ✅ Cog embedscreation chargé avec succès
+2025-01-12 17:52:46,868 - infrastructure.services.cog_loader - INFO - ✅ Cog adcreator chargé avec succès
+2025-01-12 17:52:46,868 - infrastructure.services.cog_loader - INFO - Chargement des cogs terminé:
+- Total: 5
+- Succès: 5
+- Échecs: 0
+- Taux de réussite: 100.0%
+2025-01-12 17:53:32,900 - infrastructure.services.cog_loader - INFO - Début du chargement des cogs depuis cogs
+2025-01-12 17:53:32,959 - infrastructure.services.cog_loader - INFO - ✅ Cog social chargé avec succès
+2025-01-12 17:53:32,960 - infrastructure.services.cog_loader - INFO - ✅ Cog youtube chargé avec succès
+2025-01-12 17:53:32,960 - infrastructure.services.cog_loader - INFO - ✅ Cog moderation chargé avec succès
+2025-01-12 17:53:32,960 - infrastructure.services.cog_loader - INFO - ✅ Cog embedscreation chargé avec succès
+2025-01-12 17:53:32,961 - infrastructure.services.cog_loader - INFO - ✅ Cog adcreator chargé avec succès
+2025-01-12 17:53:32,961 - infrastructure.services.cog_loader - INFO - Chargement des cogs terminé:
+- Total: 5
+- Succès: 5
+- Échecs: 0
+- Taux de réussite: 100.0%
